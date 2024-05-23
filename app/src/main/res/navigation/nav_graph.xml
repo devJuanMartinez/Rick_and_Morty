@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listado">
+    <fragment
+        android:id="@+id/listado"
+        android:name="com.example.myapplication.ui.fragments.Listado"
+        android:label="listado_layout"
+        tools:layout="@layout/listado_layout" >
+        <action
+            android:id="@+id/action_listado_to_personajesInfo"
+            app:destination="@id/personajesInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/personajesInfo"
+        android:name="com.example.myapplication.ui.holders.PersonajesInfo"
+        android:label="PersonajesInfo" >
+        <action
+            android:id="@+id/action_personajesInfo_to_episodiosInfo"
+            app:destination="@id/episodiosInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodiosInfo"
+        android:name="com.example.myapplication.ui.holders.EpisodiosInfo"
+        android:label="EpisodiosInfo" />
+</navigation>
